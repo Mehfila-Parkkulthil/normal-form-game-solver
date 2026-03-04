@@ -66,3 +66,13 @@ for (s1, s2), (p1, p2) in payoff_matrix.items():
   print(f"  {players[0]} plays {s1}, {players[1]} plays {s2}")
   print(f"    → {players[0]} gets {p1} years, {players[1]} gets {p2} years")
 
+print("-" * 55)
+def summarise_game(players, strategies, payoff_matrix):
+    print("\n GAME SUMMARY")
+    print(f"  Number of players     : {len(players)}")
+    print(f"  Strategies per player : {len(strategies)}")
+    print(f"  Total outcomes        : {len(payoff_matrix)}")
+    print(f"  ({len(strategies)} strategies ^ {len(players)} players = {len(strategies)**len(players)} combinations)")
+    print("=" * 55)
+
+summarise_game(players,strategies,payoff_matrix)
