@@ -81,3 +81,17 @@ def summarise_game(players, strategies, payoff_matrix):
     print("=" * 55)
 
 summarise_game(players,strategies,payoff_matrix)
+
+
+
+# i = 0
+# while i < len(players):
+#     player = players[i]
+#     print(f"Player {i+1}: {player}")
+#     print(f"  Strategies: {', '.join(strategies)}")
+#     i += 1
+
+# print("\n📊 All possible outcomes:")
+# for (s1, s2), (p1, p2) in payoff_matrix.items():
+#     print(f"  {players[0]} plays {s1}, {players[1]} plays {s2}")
+#     print(f"    → {players[0]} gets {p1} years, {players[1]} gets {p2} years")
