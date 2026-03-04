@@ -50,3 +50,15 @@ print(f"  Strategies per player : {len(strategies)}")
 print(f"  Total outcomes        : {len(payoff_matrix)}")
 print(f"  ({len(strategies)} strategies x {len(prisoners)} players = {len(strategies)**len(prisoners)} combinations)")
 print("=" * 55)  
+
+print("Lets play a game : You are player 1 and I am player 2")
+comp_choice= "Cooperate"
+user_choice =input("What do you choose Defect or Cooperate \n").strip().capitalize()
+if comp_choice == "Cooperate" and user_choice == "Cooperate":
+  print("     Both stay silent. Light sentence for everyone.")
+elif comp_choice == "Cooperate" and user_choice == "Defect":
+  print(f"     {prisoners[0]} trusted but got betrayed. Worst outcome for P1.")
+elif comp_choice == "Defect" and user_choice == "Cooperate":
+ print(f"     {prisoners[1]} trusted but got betrayed. Worst outcome for P2.")
+else:
+ print("     Both betrayed each other. Bad for both.")
