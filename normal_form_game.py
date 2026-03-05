@@ -1,6 +1,5 @@
-# ============================================================
-#  GAME
-# ============================================================
+# NORMAL FORM GAME
+
 import random
 
 #defining borders
@@ -154,12 +153,12 @@ def play_round(player_name, computer_name, strategies, payoff_matrix):
     for i, s in enumerate(strategies):
         print(f"    {i+1}. {s}")
 
-    # Human picks
+    # User picks
     while True:
         try:
             choice = int(input("\n  Your choice (number): ").strip())
             if 1 <= choice <= len(strategies):
-                human_move = strategies[choice - 1]
+                user_move = strategies[choice - 1]
                 break
             else:
                 print(f"  Enter a number between 1 and {len(strategies)}")
@@ -167,13 +166,13 @@ def play_round(player_name, computer_name, strategies, payoff_matrix):
             print("  Invalid input. Enter a number.")
 
     # Computer picks — uses its best response
-    comp_best = best_responses_p2(strategies, payoff_matrix, human_move)
+    comp_best = best_responses_p2(strategies, payoff_matrix, user_move)
     comp_move = random.choice(comp_best)   # pick randomly if tied
 
-    print(f"\n  You played    : {human_move}")
+    print(f"\n  You played    : {user_move}")
     print(f"  Computer played: {comp_move}")
 
-    payoff = payoff_matrix[(human_move, comp_move)]
+    payoff = payoff_matrix[(user_move, comp_move)]
     print(f"\n  Result:")
     print(f"    Your payoff      = {payoff[0]}")
     print(f"    Computer payoff  = {payoff[1]}")
@@ -186,35 +185,29 @@ def play_round(player_name, computer_name, strategies, payoff_matrix):
         print(f"\n  Equal payoffs — a draw!")
     print_line()
 
-# ─────────────────────────────────────────────
-#  MAIN
-# ─────────────────────────────────────────────
 
-def main():
-    player_name, computer_name, strategies, payoff_matrix = setup_game()
 
-    while True:
-        print("\n  MENU")
-        print_line()
-        print("  1. View Payoff Matrix")
-        print("  2. View Best Responses & Nash Equilibrium")
-        print("  3. Play a Round vs Computer")
-        print("  4. Quit")
-        print_line()
+player_name, computer_name, strategies, payoff_matrix = setup_game()
 
-        choice = input("  Your choice: ").strip()
+while True:
+  print("\n  MENU")
+  print_line()
+  print("  1. View Payoff Matrix")
+  print("  2. View Best Responses & Nash Equilibrium")
+  print("  3. Play a Round vs Computer")
+  print("  4. Quit")
+  print_line()
 
-        if choice == "1":
-            display_matrix(player_name, computer_name, strategies, payoff_matrix)
-        elif choice == "2":
-            display_analysis(player_name, computer_name, strategies, payoff_matrix)
-        elif choice == "3":
-            play_round(player_name, computer_name, strategies, payoff_matrix)
-        elif choice == "4":
-            print("\n  Thanks for playing. Goodbye!\n")
-            break
-        else:
-            print("  Invalid choice. Pick 1-4.")
+  choice = input("  Your choice: ").strip()
 
-if __name__ == "__main__":
-    main()
+  if choice == "1":
+    display_matrix(player_name, computer_name, strategies, payoff_matrix)
+  elif choice == "2":
+    display_analysis(player_name, computer_name, strategies, payoff_matrix)
+  elif choice == "3":
+    play_round(player_name, computer_name, strategies, payoff_matrix)
+  elif choice == "4":
+    print("\n  Thanks for playing. Goodbye!\n")
+    break
+  else:
+    print("  Invalid choice. Pick 1-4.")
