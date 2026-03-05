@@ -1,6 +1,6 @@
 # ============================================================
 # NORMAL FORM GAME SOLVER 
-# New: PRISONERS DILEMMA GAME
+# PRISONERS DILEMMA GAME
 # ============================================================
 #Title
 print("="*50)
