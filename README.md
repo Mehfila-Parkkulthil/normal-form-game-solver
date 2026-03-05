@@ -7,3 +7,11 @@
 
 
 This project is based on my current learning towards new opportunity of coding ,open contribution and game theory.
+---
+Concepts Used:
+-Normal form games : Representation of games in a matrix
+-Strategies : Actions available to players
+-Payoffs : Numerical rewards players recieve depending on strategy combination.
+-Dominant Strategy : A strategy that is always better than any other choices of opponent.
+-Best Response : A strategy that maximise players payoff given the other's strategy.
+---
