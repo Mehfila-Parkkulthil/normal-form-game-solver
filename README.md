@@ -1,17 +1,29 @@
 # Normal Form Game Solver
 
-<p>Purpose : Solve any normal form game (matrix form) and helps visualise or compute outcomes .</p>
-<p>What it does :</br>
-      - Take payoffs form two players.</br>
-      -Outputs possible outcomes like best responses or Nash   equilibrium.</p>
+A tool to solve and visualize normal form (matrix) games from game theory. Input payoffs for two players and compute outcomes such as best responses, dominant strategies, and Nash equilibria.
+This project was built as part of my learning journey in coding, open-source contribution, and game theory.
 
+---
 
-<p>This project is based on my current learning towards new opportunity of coding ,open contribution and game theory.</p>
+## Concepts
+
+| Term | Definition |
+|------|------------|
+| **Normal Form Game** | A matrix representation of a strategic interaction between players |
+| **Strategy** | An action available to a player |
+| **Payoff** | The numerical reward a player receives for a given combination of strategies |
+| **Dominant Strategy** | A strategy that yields a better outcome than any other, regardless of what the opponent does |
+| **Best Response** | The strategy that maximizes a player's payoff given the opponent's chosen strategy |
+
 ---
-<p>Concepts Used:</p>
-<p>-Normal form games : Representation of games in a matrix</p>
-<p>-Strategies : Actions available to players</p>
-<p>-Payoffs : Numerical rewards players recieve depending on strategy combination.</p>
-<p>-Dominant Strategy : A strategy that is always better than any other choices of opponent.</p>
-<p>-Best Response : A strategy that maximise players payoff given the other's strategy.</p>
----
+
+## Modules
+
+### Best Response Analyser
+Computes and displays the best response for each player across all strategy combinations.
+
+### Normal Form Game (Interactive)
+A terminal-based interactive mode where players can choose their strategies and see resulting payoffs in real time.
+
+### Prisoner's Dilemma
+A classic game theory scenario. Players choose to **Cooperate** or **Defect**, and the tool reveals the outcome — showing who trusted and who betrayed.
